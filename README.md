@@ -7,15 +7,37 @@ Accepted to [ACL 2025](https://2025.aclweb.org/).
 ## Data
 Since the dataset is also used for the Multi-label Arabic Dialect Identification (MLADI) leaderboard, requests to get access to the dataset can be submitted through the following [link](https://forms.gle/gdgTToxG2tH5xT27A).
 
+## Environment Setting
+```
+conda create -n MLADI python=3.8
+conda activate MLADI
+pip install -r requirements.txt
+```
+
 ## Replicating the Analysis
 * Asm. 1 - Arabic Dialects Rarely Overlap
+```python
+python a1_regional_overlap.py
+python a1_regional_overlap_detailed.py
+python a1_region_hist.py
+```
 
-* Asm. 2 - Only Short Sentences’ Dialects
-are Ambiguous
+* Asm. 2 - Only Short Sentences’ Dialects are Ambiguous
+```python
+python a2_multi_labels_and_length_ALDi.py
+```
 
 * Asm. 3 - Dialects’ Distinctive Lexical Cues
+```python
+python a3_distinctive_cues_precision.py
+```
 
-* Asm. 4 - ALDi Perceptions acros
+* Asm. 4 - ALDi Perceptions across Dialects
+```python
+python a4_ALDi_MD.py
+```
+
+Statistical Testing: ```python a4_regions_permutation_test.py```
 
 ## Citation
 ```
